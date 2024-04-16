@@ -15,27 +15,33 @@ public class App {
             int maxRow=n-1, maxCol=n-1;
 
             while(num<=n*n){
+                //우측
                 for(int col = minCol; col<= maxCol; col++){
                     arr[minRow][col]=num++;
                 }
-                minRow++;
+                minRow++; // 행 최소값 증가
 
+                //하
                 for(int row = minRow; row<=maxRow; row++){
                     arr[row][maxCol]=num++;
                 }
-                maxCol--;
+                maxCol--; // 열 최대값 감소
 
+                //좌측
                 for(int col=maxCol; col>=minCol; col--){
                     arr[maxRow][col]=num++;
                 }
-                maxRow--;
+                maxRow--; //행 최대값 감소
 
+                //상
                 for(int row=maxRow; row>= minRow; row--){
                     arr[row][minCol]=num++;
                 }
-                minCol++;
+                minCol++; //열 최소값 증가
             }
+
             System.out.println("#"+(tc+1));
+
             for(int i=0; i<n; i++){
                 for(int j=0; j<n; j++){
                     System.out.print(arr[i][j]+ " ");
