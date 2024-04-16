@@ -9,8 +9,8 @@ public class Main {
         for (int TC = 1; TC <= T; TC++) {
             int num = sc.nextInt();
             int[] score = new int[101];
-            int maxFrequency = 0;
-            int maxScore = 0;
+            int maxFrequency = 0; // 최빈값의 개수
+            int maxScore = 0; // 최빈값의 최고 점수
 
             for (int i = 0; i < 1000; i++) {
                 int studentScore = sc.nextInt();
