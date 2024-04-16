@@ -21,9 +21,9 @@ public class App {
                 test = sc.nextInt();
                 student[j] = (double) test * 0.35;
                 test = sc.nextInt();
-                student[j] = student[j] + ((double) test * 0.45);
+                student[j] = student[j] + (double) test * 0.45;
                 test = sc.nextInt();
-                student[j] = student[j] + ((double) test * 0.2);
+                student[j] = student[j] + (double) test * 0.2;
 
                 if (K == j + 1) {
                     num = student[j];
@@ -31,13 +31,15 @@ public class App {
             }
 
             Arrays.sort(student, Collections.reverseOrder());
-
+            
             int grade=0;
             for (int i = 0; i < person; i+=cnt) {
                 for (int j = 0; j < cnt; j++) {
-                    score[i+1*j] = str[grade];
+                    score[i] = str[grade];
+                    System.out.println(score[i]+" ");
                 }
                 grade++;
+                System.out.println("");
             }
 
             for(int i=0; i<person; i++){
