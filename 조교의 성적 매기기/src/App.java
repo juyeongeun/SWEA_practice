@@ -36,10 +36,8 @@ public class App {
             for (int i = 0; i < person; i+=cnt) {
                 for (int j = 0; j < cnt; j++) {
                     score[i] = str[grade];
-                    System.out.println(score[i]+" ");
                 }
                 grade++;
-                System.out.println("");
             }
 
             for(int i=0; i<person; i++){
