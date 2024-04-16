@@ -26,22 +26,26 @@ public class App {
                 }
             }
 
+            // 우하향 대각선 합 계산
             for (int i = 0; i < 100; i++) {
                 left += map[i][i];
             }
 
+            // 좌상향 대각선 합 계산
             int k = 99;
             for (int i = 0; i < 100; i++) {
                 right += map[i][k];
                 k--;
             }
 
-            // 각 배열에서 최대값 선택
+            // 각 배열에서 최대값 선택 sort함수는 nlog(n)이라 반복이 더 빠름
             for (int i = 0; i < 100; i++) {
+                // 열 최대값 구한 후 max1값과 행 최대값 비교 후 구함
                 max1 = Math.max(max1, colsum[i]);
                 max1 = Math.max(max1, rowsum[i]);
             }
 
+            //대각선 최대값구하고 위에서 구한 최대값이랑 다시 비교 후 구함
             max2 = Math.max(left, right);
             max1 = Math.max(max1, max2);
 
