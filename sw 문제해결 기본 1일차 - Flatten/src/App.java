@@ -31,11 +31,11 @@ public class App {
                 // 최고점 - 최저점 계산
                 flatten=box[idx_max] - box[idx_min];
 
-                // 평탄화 높이가 0 또는 1이면 덤프 수행 중단
+                // 평탄화 높이가 0 또는 1이면 덤프 수행 중단 후 출력
                 if (flatten == 0 || flatten == 1) {
                     k=dump+1;
                     
-                } else {
+                } else { // 최고점--, 최저점++로 평탄화 작업
                     box[idx_max]--;
                     box[idx_min]++;
                 }
