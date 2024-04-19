@@ -8,10 +8,9 @@ public class App {
 
         for (int TC = 1; TC <= T; TC++) {
             int n = sc.nextInt();
-            int[][] map = new int[n][n];
-            int col = 0, row = 0;
-            int rmax = n - 1;
-            int cmax = n - 1;
+            int[][] map = new int[n][n]; // 숫자 배열판
+            int col = 0, row = 0; //행, 열
+            int rmax = n - 1, cmax = n - 1; // 행, 열 최대값
 
             // 숫자 배열 입력
             for (int i = 0; i < n; i++) {
@@ -23,28 +22,27 @@ public class App {
             System.out.println("#"+TC);
 
             for(int k=0; k<n; k++) {
-                // 90
-                for (int i = n-1; i >= 0; i--) {
+                // 90도
+                for (int i = n-1; i >= 0; i--) { //col열에 있는 마지막 행부터 출력
                     System.out.print(map[i][col]);
                 }
                 System.out.print(" ");
-                col++;
+                col++; //col 증가
 
                 // 180
-                for (int i = n-1; i >= 0; i--) {
+                for (int i = n-1; i >= 0; i--) { // rmax행의 마지막 열부터 출력
                     System.out.print(map[rmax][i]);
                 }
                 System.out.print(" ");
-                rmax--;
+                rmax--; //rmax 감소
 
                 // 270
-                for (int i = row; i < n; i++) {
+                for (int i = row; i < n; i++) { //cmax열의 처음 행부터 출력
                     System.out.print(map[i][cmax]);
                 }
                 System.out.println("");
-                cmax--;
+                cmax--; //cmax 감소
             }
-            System.out.println("끝");
         }
     }
 }
