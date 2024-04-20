@@ -12,7 +12,6 @@ class Solution {
 			int N=sc.nextInt();
 			int M=sc.nextInt();
 			result=1;
-			cnt=0;
 
 			pows(N,M); // 함수 호출
 			System.out.println("#"+test_case+" "+result);
