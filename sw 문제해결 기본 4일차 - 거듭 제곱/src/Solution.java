@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 class Solution {
 	public static int result;
-	public static int cnt;
 
 	public static void main(String args[]) throws Exception {
 		Scanner sc = new Scanner(System.in);
