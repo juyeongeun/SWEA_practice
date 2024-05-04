@@ -29,7 +29,7 @@ public class App {
                 calculate(result.charAt(i)); // 후위 연산 계산하기
             }
 
-            System.out.println("#" + T + " " + comstack.pop());
+            System.out.println("#" + T + " " + comstack.pop()); // 출력
         }
     }
 
