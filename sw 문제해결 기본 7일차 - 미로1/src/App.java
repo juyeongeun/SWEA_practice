@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class App{
     static int ans, arr[][];
-    static int dy[] = {0, 1, 0, -1}, dx[] = {1, 0, -1, 0};
+    static int dy[] = {0, 1, 0, -1}, dx[] = {1, 0, -1, 0}; // 오른쪽, 아래, 왼쪽, 위
     static int startY, startX, endY, endX;
     static boolean check[][];
 
@@ -52,7 +52,7 @@ public class App{
         stack.push(new int[]{startY, startX}); // 시작 지점을 스택에 추가
 
         while(!stack.isEmpty()) {
-            int[] current = stack.pop();
+            int[] current = stack.pop(); // 이전 위치들을 가지고 옴
             int y = current[0];
             int x = current[1];
 
@@ -61,7 +61,7 @@ public class App{
             if(y == endY && x == endX) // 도착 지점에 도달하면 true 반환
                 return true;
 
-            for(int i=0; i<4; i++) {
+            for(int i=0; i<4; i++) { // 현재 위치에서 오른쪽, 아래, 왼쪽, 위 탐색
                 int nextY = y + dy[i];
                 int nextX = x + dx[i];
 
