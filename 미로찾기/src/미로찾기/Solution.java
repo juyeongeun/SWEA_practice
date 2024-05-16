@@ -1,4 +1,4 @@
-package 미로찾기;
+package 미로찾기; //백준 2178
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
