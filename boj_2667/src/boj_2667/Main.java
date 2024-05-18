@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Main {
+public class Main { // 아파트 단지 나누기
 	static int n, sum, cnt;
 	static List<Integer> sb;
 	static int[][] map;
