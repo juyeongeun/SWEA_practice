@@ -8,7 +8,7 @@ public class Swea_11315 {
 	static int[] dx = { 1, 1, 0, -1 };
 	static int[] dy = { 0, 1, 1, 1 };
 	static String result;
-	static int n, sum;
+	static int n;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -40,10 +40,10 @@ public class Swea_11315 {
 
 	public static void check(int y, int x) {
 		for (int i = 0; i < 4; i++) { // 좌표 이동
-			sum = 1;
-			int nx = x;
-			int ny = y;
-			for (int j = 0; j < 4; j++) {
+			int sum = 1; // 이미 o를 찾았기 때문에 1부터 시작
+			int nx = x; // 현재 좌표 저장
+			int ny = y; // 현재 좌표 저장
+			for (int j = 0; j < 4; j++) { // dx,dy이동 횟수
 				nx = nx + dx[i];
 				ny = ny + dy[i];
 				if (nx >= 0 && nx < n && ny >= 0 && ny < n) {
